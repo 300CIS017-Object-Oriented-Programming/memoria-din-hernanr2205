@@ -83,6 +83,7 @@ A la fecha Torres de Niza tiene los siguientes propietarios:
 
 ```mermaid
 classDiagram
+    direction RL
     class Propietario {
         - double identificacion
         - string nombre
@@ -130,7 +131,7 @@ classDiagram
 
     Propietario --> Propiedad : tiene
     Propiedad --> CuartoUtil : tiene
-    Administracion o-- Propietarios : tiene
-    Administracion o-- Propiedades : tiene
+    Administracion o-- Propietario : tiene
+    Administracion o-- Propiedad : tiene
     Main ..> Administracion : Use
 ```
