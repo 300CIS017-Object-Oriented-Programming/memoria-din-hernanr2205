@@ -130,7 +130,7 @@ classDiagram
 
     Propietario --> Propiedad : tiene
     Propiedad --> CuartoUtil : tiene
-    Administracion °-- Propietarios : tiene
-    Administracion °-- Propiedades : tiene
+    Administracion o-- Propietarios : tiene
+    Administracion o-- Propiedades : tiene
     Main ..> Administracion : Use
 ```
