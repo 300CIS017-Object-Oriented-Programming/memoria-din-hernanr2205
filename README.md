@@ -128,9 +128,9 @@ classDiagram
     class Main {
     }
 
-    Propietario --|> Propiedad : tiene
-    Propiedad --|> CuartoUtil : tiene
-    Administracion --|> Propietario : tiene
-
+    Propietario --> Propiedad : tiene
+    Propiedad --> CuartoUtil : tiene
+    Administracion °-- Propietarios : tiene
+    Administracion °-- Propiedades : tiene
     Main ..> Administracion : Use
 ```
