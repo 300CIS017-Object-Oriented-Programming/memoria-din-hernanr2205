@@ -26,7 +26,7 @@ void mostrarMenuPropietarios(Administracion &adminMenuProp)
     switch (opcPropietarios)
     {
     case 1:
-        adminMenuProp.imprimirPropietario();
+        adminMenuProp.imprimirPropietarios();
         break;
 
     case 2:
