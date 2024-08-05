@@ -18,6 +18,7 @@ void mostrarMenuPropietarios(Administracion &adminMenuProp)
     cout << "6. Agregar propietario\n";
     cout << "7. Mostrar un propietario dado su Id\n";
     cout << "-1. Volver\n";
+    ;
 
     cin >> opcPropietarios;
     int idPropietario;
@@ -25,7 +26,7 @@ void mostrarMenuPropietarios(Administracion &adminMenuProp)
     switch (opcPropietarios)
     {
     case 1:
-        adminMenuProp.imprimirPropietarios();
+        adminMenuProp.imprimirPropietario();
         break;
 
     case 2:
