@@ -89,7 +89,7 @@ A la fecha Torres de Niza tiene los siguientes propietarios:
 * Haz clic en el botón "Build" para compilar el proyecto.
 
 
-### 🔥 Ejercicio Exploración de la implementación del código fuente
+## 🔥 Ejercicio Exploración de la implementación del código fuente
 - Explore el diagrama UML del enunciado disponible al final de este documento
 - Observe las clases del código fuente
 - Observe la separación entre los archivos .cpp y .h. ¿Qué tienen en común y qué tienen de diferente?
