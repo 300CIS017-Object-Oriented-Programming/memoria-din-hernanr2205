@@ -62,6 +62,23 @@ A la fecha Torres de Niza tiene los siguientes propietarios:
 - Navegue por el código fuente del proyecto
 - Configure el CMake y compile el proyecto. Aquí puede encontrar un video que explica cómo hacerlo: https://code.visualstudio.com/docs/cpp/CMake-linux. Note que el proyecto ya tiene el `CMakeList` y el `CmakePresets.json`
 
+# Exploración en CLION
+
+1. **Clonar el repositorio**:
+   - Abre una terminal y clona el repositorio con el siguiente comando:&#8203;:contentReference[oaicite:2]{index=2}
+     ```bash
+     git clone https://github.com/lufe089/clases_objetos_relaciones_ejemplo.git
+
+2. **Abrir el proyecto en CLion**:
+* En CLion, selecciona "Abrir" en la pantalla de bienvenida o en el menú "Archivo".​
+* Navega hasta la carpeta del proyecto clonado y selecciona el archivo CMakeLists.txt.​
+* Haz clic en "Abrir" y luego en "Abrir como Proyecto".
+
+3. **Configurar y compilar el proyecto**
+* CLion configurará automáticamente el proyecto utilizando CMake. Espera a que finalice la configuración.
+* Si es necesario, selecciona la configuración de compilación en la esquina superior derecha de la ventana (usualmente "Debug" o "Release").
+* Haz clic en el botón "Build" para compilar el proyecto.
+
 # Exploración de la implementación del código fuente
 
 - Intente elaborar un diagrama UML que solucione el enunciado. Luego revise el archivo UML que soluciona el enunciado.
@@ -80,7 +97,10 @@ A la fecha Torres de Niza tiene los siguientes propietarios:
 - Mejore el código fuente para cambiar el estado de un cuarto útil a `terminado` para propiedades que tenían cuarto útil sin terminar
 
 ## UML
+<details>
+<summary>🔍 Diagrama propuesto</summary>
 
+**Diagrama UML**
 ```mermaid
 classDiagram
     direction RL
@@ -135,3 +155,4 @@ classDiagram
     Administracion o-- Propiedad : tiene
     Main ..> Administracion : Use
 ```
+</details>
