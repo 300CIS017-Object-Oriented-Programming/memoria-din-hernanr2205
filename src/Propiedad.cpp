@@ -6,7 +6,7 @@ Propiedad::Propiedad()
     piso = 0;
     areaPropiedad = 0;
     hayParqueadero = false; // Toda propiedad x defecto no tenga parqueadero
-    cuartoUtil = NULL;
+    cuartoUtil = nullptr;
 }
 
 Propiedad::Propiedad(double numIdentificacion, int piso, float areaPropiedad, bool hayParqueadero,
@@ -20,7 +20,7 @@ void Propiedad::mostrarDatos()
     cout << "El area es: " << areaPropiedad << "\n";
     cout << "El numero de identificacion es: " << numIdentificacion << "\n";
     cout << "Tiene parqueadero: " << hayParqueadero << "\n";
-    if (cuartoUtil != NULL)
+    if (cuartoUtil != nullptr)
     {
         cout << "Cuarto util:  " << "\n";
         cuartoUtil->mostrarDatos();

@@ -3,7 +3,6 @@
 
 
 Administracion::Administracion() {
-
     cout << "Entre al constructor de administracion \n";
     cobroAscensor = 2000;
     costoBase = 150000;
@@ -102,12 +101,9 @@ void Administracion::inicializarDatos() {
     propietarios.push_back(persona2);
     propietarios.push_back(persona3);
     propietarios.push_back(persona4);
-
-
 }
 
 void Administracion::agregarPropiedad() {
-
     int piso;
     float area;
     double id;
@@ -152,15 +148,12 @@ void Administracion::agregarPropiedad() {
         nuevoCuarto->setEstaTerminado(estaTerminado);
 
         propTemp = new Propiedad(id, piso, area, parqueadero, nuevoCuarto);
-
     } else {
         // Se envía NULL en el cuarto útil
         propTemp = new Propiedad(id, piso, area, parqueadero, nullptr);
     }
     propiedades.push_back(propTemp);
     cout << "\nPropiedad agregada" << endl;
-
-
 }
 
 void Administracion::agregarPropietario() {
@@ -179,7 +172,6 @@ void Administracion::agregarPropietario() {
 
 
 void Administracion::relacionarPropietarioPropiedad() {
-
     double id;
     bool idFound = false;
     int idPropiedad;
@@ -204,23 +196,23 @@ void Administracion::relacionarPropietarioPropiedad() {
                 idxTempPropietario = i;
             } else {
                 cout << " No es posible seleccionar el propietario con id " << id
-                     << "este propietario ya tiene una propiedad asociada" << endl;
+                        << "este propietario ya tiene una propiedad asociada" << endl;
                 break;
             }
         }
     }
 
-    if (!idFound){
-        cout << "Id de propietario no encontrado " <<endl;
-    }else{
+    if (!idFound) {
+        cout << "Id de propietario no encontrado " << endl;
+    } else {
         for (int i = 0; i < propiedades.size() && !idPropiedadFound; ++i) {
-                if (propiedades[i]->getNumIdentificacion() == idPropiedad) {
-                    idPropiedadFound = true;
-                    idxTempPropiedad = i;
-                }
+            if (propiedades[i]->getNumIdentificacion() == idPropiedad) {
+                idPropiedadFound = true;
+                idxTempPropiedad = i;
+            }
         }
-        if (!idPropiedadFound){
-            cout << "Id de propiedad no encontrado " <<endl;
+        if (!idPropiedadFound) {
+            cout << "Id de propiedad no encontrado " << endl;
         }
     }
 
@@ -228,7 +220,7 @@ void Administracion::relacionarPropietarioPropiedad() {
         Propiedad *propiedadTemp = propiedades[idxTempPropiedad];
         propietarios[idxTempPropietario]->setPropiedad(propiedadTemp);
         cout << "Propietario " << propietarios[idxTempPropietario]->getNombre() << " asociado con propiedad "
-             << propiedadTemp->getNumIdentificacion() << endl;
+                << propiedadTemp->getNumIdentificacion() << endl;
     }
 }
 
@@ -266,7 +258,6 @@ void Administracion::imprimirPropietariosConParqueadero() {
             propietarios[i]->mostrarDatos();
         }
     }
-
 }
 
 void Administracion::recaudarAdministracion() {
@@ -282,7 +273,6 @@ void Administracion::recaudarAdministracion() {
 
 
 Administracion::~Administracion() {
-
     for (int i = 0; i < propietarios.size(); i++) {
         // LLama al destructor por cada elemento del arreglo
         delete propietarios[i];
@@ -298,30 +288,22 @@ Administracion::~Administracion() {
 
 
 void Administracion::imprimirPropietariosSinCuarto() {
-
     for (int i = 0; i < propietarios.size(); ++i) {
         if (propietarios[i]->getPropiedad() != nullptr) {
-
             if (propietarios[i]->getPropiedad()->getCuartoUtil() == nullptr) {
-
                 propietarios[i]->mostrarDatos();
             }
         }
     }
-
 }
 
 void Administracion::imprimirPropietariosCuartoUtil(bool isTerminado) {
-
-    for (auto & propietario : propietarios) {
+    for (auto &propietario: propietarios) {
         if (propietario->getPropiedad() != nullptr) {
-
             if (propietario->getPropiedad()->getCuartoUtil() != nullptr &&
                 propietario->getPropiedad()->getCuartoUtil()->isEstaTerminado() == isTerminado) {
-
                 propietario->mostrarDatos();
             }
         }
     }
-
 }

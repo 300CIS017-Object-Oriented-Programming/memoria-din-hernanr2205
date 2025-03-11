@@ -4,7 +4,6 @@
 #include <iostream>
 #include "Propietario.h"
 #include "Propiedad.h"
-#include "CuartoUtil.h"
 #include <vector>
 
 using std::cout;
