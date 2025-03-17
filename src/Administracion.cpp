@@ -17,19 +17,43 @@ Administracion::Administracion() {
  * Método para instanciar los objetos que se usarán en el código
  */
 void Administracion::inicializarDatos() {
+    // Crear propietarios
     Propietario *persona1 = new Propietario();
-    Propietario *persona2 = new Propietario();
-    Propietario *persona3 = new Propietario();
-    Propietario *persona4 = new Propietario();
-    Propiedad *prop1 = new Propiedad();
-    Propiedad *prop2 = new Propiedad();
-    Propiedad *prop3 = new Propiedad();
-    Propiedad *prop4 = new Propiedad(); // Automaticamente al constructor x defecto
-    CuartoUtil *cuarto1 = new CuartoUtil();
-    CuartoUtil *cuarto2 = new CuartoUtil();
-    CuartoUtil *cuarto3 = new CuartoUtil();
+    std::cout << "Propietario 1 creado exitosamente en " << persona1 << std::endl;
 
-    //Inicializar cuartos utiles
+    Propietario *persona2 = new Propietario();
+    std::cout << "Propietario 2 creado exitosamente en " << persona2 << std::endl;
+
+    Propietario *persona3 = new Propietario();
+    std::cout << "Propietario 3 creado exitosamente en " << persona3 << std::endl;
+
+    Propietario *persona4 = new Propietario();
+    std::cout << "Propietario 4 creado exitosamente en " << persona4 << std::endl;
+
+    // Crear propiedades
+    Propiedad *prop1 = new Propiedad();
+    std::cout << "Propiedad 1 creada exitosamente en " << prop1 << std::endl;
+
+    Propiedad *prop2 = new Propiedad();
+    std::cout << "Propiedad 2 creada exitosamente en " << prop2 << std::endl;
+
+    Propiedad *prop3 = new Propiedad();
+    std::cout << "Propiedad 3 creada exitosamente en " << prop3 << std::endl;
+
+    Propiedad *prop4 = new Propiedad();
+    std::cout << "Propiedad 4 creada exitosamente en " << prop4 << std::endl;
+
+    // Crear cuartos útiles
+    CuartoUtil *cuarto1 = new CuartoUtil();
+    std::cout << "Cuarto útil 1 creado exitosamente en " << cuarto1 << std::endl;
+
+    CuartoUtil *cuarto2 = new CuartoUtil();
+    std::cout << "Cuarto útil 2 creado exitosamente en " << cuarto2 << std::endl;
+
+    CuartoUtil *cuarto3 = new CuartoUtil();
+    std::cout << "Cuarto útil 3 creado exitosamente en " << cuarto3 << std::endl;
+
+    // Inicializar cuartos útiles
     vector<CuartoUtil *> cuartosUtiles;
     cuarto1->setPiso(2);
     cuarto1->setNumeracion("A201");
@@ -52,7 +76,6 @@ void Administracion::inicializarDatos() {
     prop1->setAreaPropiedad(160);
     prop1->setHayParqueadero(true);
     prop1->setPiso(10);
-
 
     prop2->setNumIdentificacion(contIds++);
     prop2->setAreaPropiedad(30);
